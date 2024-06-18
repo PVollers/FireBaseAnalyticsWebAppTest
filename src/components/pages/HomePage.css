@@ -1,0 +1,159 @@
+/* HomePage.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  box-sizing: border-box;
+}
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Ermöglicht vertikales Scrollen */
+
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Beginnt den Inhalt oben */
+  padding: 20px;
+  min-height: 100vh; /* Stellt sicher, dass das Element mindestens die volle Höhe des Ansichtsfensters einnimmt */
+  box-sizing: border-box;
+  overflow: auto; /* Ermöglicht das Scrollen, wenn der Inhalt größer ist als der Viewport */
+}
+  
+  .firebase-image {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  h1{
+    font-size: 5rem; /* Hier die Größe anpassen */
+    margin-bottom: 20px;
+  }
+
+  h2{
+    font-size: 3rem; /* Hier die Größe anpassen */
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 200%;
+  }
+
+ /* Neuer Stil für den Button-Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Abstand zwischen den Buttons */
+  }
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 2rem;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Erhöhen Sie die max-width */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    gap: '20px'
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  input.error {
+    border-color: #ff0000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  }
+
+  input::placeholder {
+    color: red; /* Platzhaltertext in rot */
+    font-style: italic; /* Optional: Kursivschrift für den Platzhaltertext */
+    font-weight: bold; /* Platzhaltertext fett */
+  }
+  
+  .correct-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: green;
+  }
+
+  .large-text {
+    font-size: 1em; /* Größe anpassen nach Bedarf */
+    font-weight: bold; /* Optional: Fett */
+  }
+  
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
