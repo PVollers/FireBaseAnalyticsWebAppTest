@@ -16,7 +16,7 @@ interface FourthPageProps {
 const FourthPage: React.FC<FourthPageProps> = ({ userId }) => {
 
   useEffect(() => {
-    logEvent(analytics,'FourthPage_view', { page_title: 'Fourth_Page', userId })
+    logEvent(analytics,'FourthPage_view', { page_title: 'Fourth_Page', userId})
   }, [userId]);
 
   const bildsymbol = 'affe';

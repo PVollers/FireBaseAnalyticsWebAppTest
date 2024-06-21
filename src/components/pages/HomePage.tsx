@@ -34,13 +34,17 @@ const HomePage: React.FC<HomePageProps> = ({ setUserId }) => {
 
   useEffect(() => {
     logEvent(analytics,'HomePage_view', { page_title: 'Home_Page'})
+    //logEvent(analytics,'page_view', { page_title: 'Home_Page'})
   }, []);
+
+  
 
 
 
   //Login Prüfung nach betätigung des Button "Anmelden"
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    
 
     // Authentifizierung basierend auf der userId
     const user = users.find(u => u.userId === inputUserId && u.userPassword === inputPassword);

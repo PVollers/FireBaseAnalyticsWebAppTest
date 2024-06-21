@@ -15,7 +15,8 @@ interface SecondPageProps {
 const SecondPage: React.FC<SecondPageProps> = ({ userId }) => {
   useEffect(() => {
     console.log('SecondPage rendered');
-    logEvent(analytics, 'SecondPage_view', { page_title: 'Second_Page',  userId });
+    logEvent(analytics, 'SecondPage_view', { page_title: 'Second_Page', userId });
+    //logEvent(analytics, 'page_view', { page_title: 'Second_Page',  userId });
   }, [userId]);
 
  const bildsymbol = 'tiger';
