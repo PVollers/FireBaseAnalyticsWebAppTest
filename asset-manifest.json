@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FireBaseAnalyticsWebAppTest/static/css/main.c77d49aa.css",
-    "main.js": "/FireBaseAnalyticsWebAppTest/static/js/main.220345b6.js",
+    "main.js": "/FireBaseAnalyticsWebAppTest/static/js/main.9d24825f.js",
     "static/js/453.21a548ef.chunk.js": "/FireBaseAnalyticsWebAppTest/static/js/453.21a548ef.chunk.js",
     "static/media/affe_p.png": "/FireBaseAnalyticsWebAppTest/static/media/affe_p.d32a48407fab6e2f833b.png",
     "static/media/tiger_p.png": "/FireBaseAnalyticsWebAppTest/static/media/tiger_p.9512663d7a6466fab8f2.png",
@@ -11,11 +11,11 @@
     "sw.js": "/FireBaseAnalyticsWebAppTest/sw.js",
     "index.html": "/FireBaseAnalyticsWebAppTest/index.html",
     "main.c77d49aa.css.map": "/FireBaseAnalyticsWebAppTest/static/css/main.c77d49aa.css.map",
-    "main.220345b6.js.map": "/FireBaseAnalyticsWebAppTest/static/js/main.220345b6.js.map",
+    "main.9d24825f.js.map": "/FireBaseAnalyticsWebAppTest/static/js/main.9d24825f.js.map",
     "453.21a548ef.chunk.js.map": "/FireBaseAnalyticsWebAppTest/static/js/453.21a548ef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c77d49aa.css",
-    "static/js/main.220345b6.js"
+    "static/js/main.9d24825f.js"
   ]
 }
