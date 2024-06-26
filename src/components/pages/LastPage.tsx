@@ -13,7 +13,8 @@ interface LastPageProps {
 const LastPage: React.FC<LastPageProps> = ({ userId }) => {
 
   useEffect(() => {
-    logEvent(analytics,'LastPage_view', { page_title: 'Last_Page' ,userId })
+    console.log('LastPage rendered');
+    logEvent(analytics,'LastPage_view', { page_title: 'Last_Page', user_Id: userId })
   }, [userId]);
 
   return(

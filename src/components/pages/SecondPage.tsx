@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { analytics } from '../../firebaseConfig';
-import { logEvent } from 'firebase/analytics';
+import { logEvent, setUserId } from 'firebase/analytics';
 import ButtonNext from '../Buttons/ButtonNext';
 import ButtonBack from '../Buttons/ButtonBack';
 import './HomePage.css';
@@ -15,7 +15,9 @@ interface SecondPageProps {
 const SecondPage: React.FC<SecondPageProps> = ({ userId }) => {
   useEffect(() => {
     console.log('SecondPage rendered');
-    logEvent(analytics, 'SecondPage_view', { page_title: 'Second_Page', userId });
+    //setUserId(analytics, userId);
+    //setUserId(analytics, userId);
+    logEvent(analytics, 'SecondPage_view', { page_title: 'Second_Page', user_Id: userId });
     //logEvent(analytics, 'page_view', { page_title: 'Second_Page',  userId });
   }, [userId]);
 
@@ -88,8 +90,8 @@ const SecondPage: React.FC<SecondPageProps> = ({ userId }) => {
       )}
 
       <div className='button-container'>
-      <ButtonBack name = 'Back' page = 'SecondPage' userId={userId} />
-      <ButtonNext name='Next' disabled={isCorrect} page = 'SecondPage' userId={userId}/>
+      <ButtonBack name = 'Back' page = 'Second_Page' userId={userId} />
+      <ButtonNext name='Next' disabled={isCorrect} page = 'Second_Page' userId={userId}/>
      
       </div>
     </div>

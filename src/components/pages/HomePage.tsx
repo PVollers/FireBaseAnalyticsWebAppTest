@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { analytics } from '../../firebaseConfig';
-import { logEvent } from 'firebase/analytics';
+import { logEvent, setUserId as setAnalyticsUserId } from 'firebase/analytics';
 import ButtonNext from '../Buttons/ButtonNext';
 import HomePic from '../../pictures/FireBaseHomePic';
 import './HomePage.css';
@@ -33,9 +33,11 @@ const HomePage: React.FC<HomePageProps> = ({ setUserId }) => {
 
 
   useEffect(() => {
-    logEvent(analytics,'HomePage_view', { page_title: 'Home_Page'})
+    console.log('Startseite offen');
+   // logEvent(analytics,'HomePage_view', { page_title: 'Home_Page'});
+   logEvent(analytics, 'HomePage_view', { page_title: 'Home_Page' });
     //logEvent(analytics,'page_view', { page_title: 'Home_Page'})
-  }, []);
+  }, [inputUserId]);
 
   
 
@@ -51,6 +53,7 @@ const HomePage: React.FC<HomePageProps> = ({ setUserId }) => {
     if (user) { 
       setIsAuthenticated(true);
       setUserId(inputUserId); //übergibt den anmeldenamen global sodass es an alle weiteren sediten weitergeben werden kann
+      setAnalyticsUserId(analytics, inputUserId);//wurde zusätzlich hinzugefügt
     } else {
       alert('Ungültige Anmelde-ID oder Passwort');
     }
@@ -72,7 +75,7 @@ const HomePage: React.FC<HomePageProps> = ({ setUserId }) => {
       alt="Firebase" 
       className="firebase-image"
     /> */}
-      <ButtonNext name='Next' page = 'HomePage' userId={inputUserId} />
+      <ButtonNext name='Next' page = 'Home_Page' userId={inputUserId} />
       </>
     ):(
       <form onSubmit={handleLogin} className="login-form" >

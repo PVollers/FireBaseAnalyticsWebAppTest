@@ -20,8 +20,9 @@ const ButtonNext: React.FC<ButtonNextProp> = ({name, disabled,page, userId}) =>{
 
     const handleClick = () => {
         console.log('ButtonNext clicked');
-        logEvent(analytics, 'button_next_click', { page, userId}); 
-        //alert('ButtonNext was clicked!');
+        logEvent(analytics, 'button_next_click', {page_title: page, user_id: userId}); 
+    
+       //alert('ButtonNext was clicked!');
         const currentIndex = routes.findIndex(route => route.path === location.pathname);
         const nextIndex = currentIndex + 1 <routes.length ? currentIndex +1 : 0; //Wenn es noch einen PAth gibt dann ist true wenn nicht dann gib 0 zurück
         const nextRoute = routes[nextIndex];

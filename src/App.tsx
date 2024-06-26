@@ -6,14 +6,18 @@ import HomePage from './components/pages/HomePage';
 import ThirdPage from './components/pages/ThirdPage';
 import FourthPage from './components/pages/FourthPage';
 import LastPage from './components/pages/LastPage';
+import useOnlineStatus from './OnlineStatus';
+import './App.css';
 
 
 
-function App(){
-  const [userId, setUserId] = useState('');
+const App: React.FC = () => {
+  const [userId, setUserId] = useState<string>('');
+  const isOnline: boolean = useOnlineStatus();
 
   return(
-    <Router>
+    <Router basename="/FireBaseAnalyticsWebAppTest">
+       {!isOnline && <div className="offline-indicator">Sie sind offline</div>}
       <Routes>
         <Route path = '/' element = {<HomePage setUserId={setUserId}/>}/>      
         <Route path = '/secondpage' element = {<SecondPage userId={userId}/>}/>'

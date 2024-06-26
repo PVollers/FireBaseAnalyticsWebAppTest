@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { analytics } from '../../firebaseConfig';
-import { logEvent } from 'firebase/analytics';
+import { logEvent,setUserId } from 'firebase/analytics';
 import ButtonNext from '../Buttons/ButtonNext';
 import ButtonBack from '../Buttons/ButtonBack';
 import './HomePage.css';
@@ -14,7 +14,9 @@ interface ThirdPageProps{
 
 const ThirdPage: React.FC<ThirdPageProps> = ({userId}) => {
   useEffect(() => {
-    logEvent(analytics, 'ThirdPage_view', { page_title: 'Third_Page', userId });
+    console.log('ThirdPage rendered');
+    //setUserId(analytics, userId);
+    logEvent(analytics, 'ThirdPage_view', { page_title: 'Third_Page', user_Id: userId, });
   }, [userId]);
 
   const bildsymbol = 'pinguin';
@@ -85,8 +87,8 @@ const ThirdPage: React.FC<ThirdPageProps> = ({userId}) => {
         <p className="correct-text">Richtig!</p>
       )}
       <div className='button-container'>
-      <ButtonBack name = 'Back' page = 'SecondPage' userId={userId}/>
-      <ButtonNext name='Next' disabled={isCorrect} page = 'ThirdPage' userId={userId}/>
+      <ButtonBack name = 'Back' page = 'Third_Page' userId={userId}/>
+      <ButtonNext name='Next' disabled={isCorrect} page = 'Third_Page' userId={userId}/>
      
       </div>
     </div>

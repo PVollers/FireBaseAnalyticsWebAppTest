@@ -16,7 +16,8 @@ interface FourthPageProps {
 const FourthPage: React.FC<FourthPageProps> = ({ userId }) => {
 
   useEffect(() => {
-    logEvent(analytics,'FourthPage_view', { page_title: 'Fourth_Page', userId})
+    console.log('FourthPage rendered');
+    logEvent(analytics,'FourthPage_view', { page_title: 'Fourth_Page',  user_Id: userId})
   }, [userId]);
 
   const bildsymbol = 'affe';
@@ -89,8 +90,8 @@ const FourthPage: React.FC<FourthPageProps> = ({ userId }) => {
     )
     }
       <div className='button-container'>
-      <ButtonBack name = 'Back' page = 'SecondPage' userId={userId}/>
-      <ButtonNext name='Next' disabled={isCorrect} page = 'FourthPage' userId={userId} /> 
+      <ButtonBack name = 'Back' page = 'Fourth_Page' userId={userId}/>
+      <ButtonNext name='Next' disabled={isCorrect} page = 'Fourth_Page' userId={userId} /> 
       </div>
     </div>
 );
