@@ -37,7 +37,7 @@ const HomePage: React.FC<HomePageProps> = ({ setUserId }) => {
    // logEvent(analytics,'HomePage_view', { page_title: 'Home_Page'});
    logEvent(analytics, 'HomePage_view', { page_title: 'Home_Page' });
     //logEvent(analytics,'page_view', { page_title: 'Home_Page'})
-  }, [inputUserId]);
+  }, []);
 
   
 
