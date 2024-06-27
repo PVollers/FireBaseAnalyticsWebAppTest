@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { analytics } from '../../firebaseConfig';
-import { logEvent, setUserId } from 'firebase/analytics';
+import { logEvent} from 'firebase/analytics';
 import ButtonNext from '../Buttons/ButtonNext';
 import ButtonBack from '../Buttons/ButtonBack';
 import './HomePage.css';
