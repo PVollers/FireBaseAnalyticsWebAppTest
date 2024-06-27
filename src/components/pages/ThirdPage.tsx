@@ -9,15 +9,17 @@ import ButtonCheck from '../Buttons/ButtonCheck';
 
 interface ThirdPageProps{
   userId: string;
+  isOnline: boolean;
 }
 
 
-const ThirdPage: React.FC<ThirdPageProps> = ({userId}) => {
+const ThirdPage: React.FC<ThirdPageProps> = ({userId, isOnline}) => {
   useEffect(() => {
-    console.log('ThirdPage rendered');
+    console.log('ThirdPage rendered with userId:', userId, 'and network status:', isOnline ? 'online' : 'offline');
+    const network = isOnline ? "online" : "offline";
     //setUserId(analytics, userId);
-    logEvent(analytics, 'ThirdPage_view', { page_title: 'Third_Page', user_Id: userId, });
-  }, [userId]);
+    logEvent(analytics, 'ThirdPage_view', { page_title: 'Third_Page', user_Id: userId, onlinestatus: network });
+  }, [userId, isOnline]);
 
   const bildsymbol = 'pinguin';
 

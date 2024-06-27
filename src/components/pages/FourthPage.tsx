@@ -11,14 +11,16 @@ import ButtonCheck from '../Buttons/ButtonCheck';
 
 interface FourthPageProps {
   userId: string;
+  isOnline: boolean;
 }
 
-const FourthPage: React.FC<FourthPageProps> = ({ userId }) => {
+const FourthPage: React.FC<FourthPageProps> = ({ userId, isOnline }) => {
 
   useEffect(() => {
-    console.log('FourthPage rendered');
-    logEvent(analytics,'FourthPage_view', { page_title: 'Fourth_Page',  user_Id: userId})
-  }, [userId]);
+    console.log('FourthPage rendered with userId:', userId, 'and network status:', isOnline ? 'online' : 'offline');
+    const network = isOnline ? "online" : "offline";
+    logEvent(analytics,'FourthPage_view', { page_title: 'Fourth_Page',  user_Id: userId, onlinestatus: network })
+  }, [userId, isOnline]);
 
   const bildsymbol = 'affe';
 

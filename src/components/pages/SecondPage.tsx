@@ -10,16 +10,18 @@ import ButtonCheck from '../Buttons/ButtonCheck';
 
 interface SecondPageProps {
   userId: string;
+  isOnline: boolean;
 }
 
-const SecondPage: React.FC<SecondPageProps> = ({ userId }) => {
+const SecondPage: React.FC<SecondPageProps> = ({userId, isOnline}) => {
   useEffect(() => {
-    console.log('SecondPage rendered');
+    console.log('SecondPage rendered with userId:', userId, 'and network status:', isOnline ? 'online' : 'offline');
+    const network = isOnline ? "online" : "offline";
     //setUserId(analytics, userId);
     //setUserId(analytics, userId);
-    logEvent(analytics, 'SecondPage_view', { page_title: 'Second_Page', user_Id: userId });
+    logEvent(analytics, 'SecondPage_view', { page_title: 'Second_Page', user_Id: userId, onlinestatus: network });
     //logEvent(analytics, 'page_view', { page_title: 'Second_Page',  userId });
-  }, [userId]);
+  }, [userId, isOnline]);
 
  const bildsymbol = 'tiger';
 

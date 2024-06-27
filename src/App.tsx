@@ -20,10 +20,10 @@ const App: React.FC = () => {
        {!isOnline && <div className="offline-indicator">Sie sind offline</div>}
       <Routes>
         <Route path = '/' element = {<HomePage setUserId={setUserId}/>}/>      
-        <Route path = '/secondpage' element = {<SecondPage userId={userId}/>}/>'
-        <Route path = '/thirdpage' element = {<ThirdPage userId={userId}/>}/>'
-        <Route path = '/fourthpage' element = {<FourthPage userId={userId}/>}/>'
-        <Route path = '/lastpage' element = {<LastPage userId={userId}/>}/>'
+        <Route path = '/secondpage' element = {<SecondPage userId={userId} isOnline = {isOnline}/>}/>'
+        <Route path = '/thirdpage' element = {<ThirdPage userId={userId} isOnline = {isOnline}/>}/>'
+        <Route path = '/fourthpage' element = {<FourthPage userId={userId} isOnline = {isOnline}/>}/>'
+        <Route path = '/lastpage' element = {<LastPage userId={userId} isOnline = {isOnline}/>}/>'
       </Routes>
     </Router>
    

@@ -8,14 +8,16 @@ import ButtonHome from '../Buttons/ButtonHome';
 
 interface LastPageProps {
   userId: string;
+  isOnline: boolean;
 }
 
-const LastPage: React.FC<LastPageProps> = ({ userId }) => {
+const LastPage: React.FC<LastPageProps> = ({ userId, isOnline  }) => {
 
   useEffect(() => {
-    console.log('LastPage rendered');
-    logEvent(analytics,'LastPage_view', { page_title: 'Last_Page', user_Id: userId })
-  }, [userId]);
+    console.log('LastPage rendered with userId:', userId, 'and network status:', isOnline ? 'online' : 'offline');
+    const network = isOnline ? "online" : "offline";
+    logEvent(analytics,'LastPage_view', { page_title: 'Last_Page', user_Id: userId, onlinestatus: network })
+  }, [userId, isOnline]);
 
   return(
     <div className="home-page">
