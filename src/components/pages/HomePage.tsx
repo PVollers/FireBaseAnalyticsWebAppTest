@@ -6,6 +6,7 @@ import HomePic from '../../pictures/FireBaseHomePic';
 import './HomePage.css';
 
 
+
 //Anmelde-Konten
 interface User {
   userId: string;
@@ -53,7 +54,6 @@ const HomePage: React.FC<HomePageProps> = ({ setUserId }) => {
     if (user) { 
       setIsAuthenticated(true);
       setUserId(inputUserId); //übergibt den anmeldenamen global sodass es an alle weiteren sediten weitergeben werden kann
-      setAnalyticsUserId(analytics, inputUserId);//wurde zusätzlich hinzugefügt
     } else {
       alert('Ungültige Anmelde-ID oder Passwort');
     }

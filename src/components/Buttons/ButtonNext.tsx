@@ -20,7 +20,7 @@ const ButtonNext: React.FC<ButtonNextProp> = ({name, disabled,page, userId}) =>{
 
     const handleClick = () => {
         console.log('ButtonNext clicked');
-        logEvent(analytics, 'button_next_click', {page_title: page, user_id: userId}); 
+        logEvent(analytics, 'button_next_click', {page_title: page, user_Id: userId}); 
     
        //alert('ButtonNext was clicked!');
         const currentIndex = routes.findIndex(route => route.path === location.pathname);

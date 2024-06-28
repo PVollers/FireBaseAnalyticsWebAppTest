@@ -18,7 +18,7 @@ interface ButtonBackProps {
     const location = useLocation();
 
     const handleClick = () => {
-        logEvent(analytics, 'button_back_click', {page, userId});
+        logEvent(analytics, 'button_back_click', {page_title: page, user_Id: userId});
         //alert('ButtonBack was clicked!');
         const currentIndex = routes.findIndex(route => route.path === location.pathname);
         const prevIndex = currentIndex - 1 >= 0  ? currentIndex -1 : routes.length -1; //Wenn es noch einen Path gibt dann ist true wenn nicht dann gib 0 zurück

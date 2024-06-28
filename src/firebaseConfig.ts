@@ -19,5 +19,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+localStorage.setItem('debug', 'firebase:analytics');
 
 export { analytics };

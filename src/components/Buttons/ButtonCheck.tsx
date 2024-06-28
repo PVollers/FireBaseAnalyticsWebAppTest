@@ -24,7 +24,7 @@ const ButtonCheck: React.FC<ButtonCheckProp> = ({name, bildsymb, clearform,setHa
     //const location = useLocation();
 
     const handleClick = () => {
-        logEvent(analytics, 'button_check_click', {page, userId});
+        logEvent(analytics, 'button_check_click', {page_title: page, user_Id: userId});
         //alert('ButtonNext was clicked!')
 
             if (formData === bildsymb){
