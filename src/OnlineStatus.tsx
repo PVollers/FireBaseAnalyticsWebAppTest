@@ -26,4 +26,18 @@ const useOnlineStatus = (): boolean => {
   return isOnline;
 };
 
+// Fehlerbehandlung für fehlgeschlagene Anfragen:
+// Implementieren Sie eine Methode, um fehlgeschlagene Anfragen manuell erneut zu senden, wenn die Verbindung wiederhergestellt ist. Dies kann durch Überwachung des Netzwerkstatus erfolgen.
+
+// javascript
+// Code kopieren
+// window.addEventListener('online', () => {
+//   // Code zum erneuten Senden der fehlgeschlagenen Anfragen
+//   resendFailedRequests();
+// });
+
+// function resendFailedRequests() {
+//   // Ihre Logik zum erneuten Senden der Anfragen
+//}
+
 export default useOnlineStatus;
